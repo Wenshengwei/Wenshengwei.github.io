@@ -1,0 +1,59 @@
+body{
+	background:url(../img/background.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+}
+#show-back{
+	width: 60%;
+	height:400px;
+	margin: 0 auto;
+	margin-top: 5%;
+	text-align: left;
+	padding: 10px 100px;
+	background: #00000020;
+}
+#text-design{
+	background: #FFDAB9;
+	font: "微软雅黑";
+	font-size: 20px;
+	color: #0D0D0D;
+}
+
+h1{
+	color: #FFA07A;
+}
+h2{
+	color: #FFA07A;
+}
+h3{
+	font-size: 20px;
+}
+
+#button-design button{
+	height: 30px;
+	width: auto;
+	background: #FFD39B;
+	color: #CD0000;
+	float: right;
+	margin-right: 10px;
+}
+#answer{
+	margin-top: 20px;
+}
+#answer button{
+	height: 30px;
+	width: 50px;
+	background: #FFDAB9;
+	color: #CD0000;
+	float: left;
+	margin-left: 10px;
+}
+#answer-design{
+	background:#FFDAB9;
+	width: auto;
+	font: "微软雅黑";
+	font-size: 22px;
+	color:#0D0D0D;
+	margin-left: 10px;
+}
