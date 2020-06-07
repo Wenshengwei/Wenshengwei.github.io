@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>判断题</title>
+		<title>简答题</title>
 		<link rel="stylesheet" href="css/showor.css" />
 		<script src="js/Bmob-2.2.4.min.js"></script>
 		<script> 
@@ -11,7 +11,7 @@
 			var i=-1;
 			function getSubject(flag){
 				const sub = Bmob.Query("Question");
-				sub.equalTo("type1", "==", "判断题");
+				sub.equalTo("type1", "==", "简答题");
 				sub.find().then(res => {
 				  var spanTag = document.getElementById("text-design");
 				  spanTag.innerHTML=i+1+"、"+res[i].subject;
@@ -23,11 +23,11 @@
 					i=i-1
 				}
 				var spanTag = document.getElementById("answer-design");
-				  spanTag.innerHTML=null;
+				spanTag.innerHTML=null;
 			}
 			function getAnswer(optionFlag){
 				const ans = Bmob.Query("Question");
-				ans.equalTo("type1", "==", "判断题");
+				ans.equalTo("type1", "==", "简答题");
 				ans.find().then(res => {
 				  var spanTag = document.getElementById("answer-design");
 				  spanTag.innerHTML=res[i].answer;
@@ -39,7 +39,7 @@
 	<body>
 		<div id="show-back">
 			
-			<h1>判断题</h1>
+			<h1>简答题</h1>
 				<h2>题目</h2>
 				<textarea id="text-design"rows="5"cols="60"disabled="disabled"></textarea>
 				<div id="answer" class="form">

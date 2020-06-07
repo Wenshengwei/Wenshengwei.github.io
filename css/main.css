@@ -5,15 +5,18 @@ body{
 	
 }
 #main-back{
-	margin: auto;
+	margin: 0 auto;
 	margin-top: 200px;
+	height: 300px;
+	width: 100%;
+	background: #00000000;
 }
 #main-back button{
 	background: #FFA07A;
 	width: 80px;
 	height: 200px;
 	margin-top: 60px;
-	margin-left: 200px;
+	margin-left: 15%;
 	text-align: center;
 	font-weight: 100;
 	font-size:  20px;

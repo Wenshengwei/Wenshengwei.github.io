@@ -4,23 +4,113 @@
 		<meta charset="UTF-8">
 		<title>选择题</title>
 		<link rel="stylesheet" href="css/showchoice.css" />
+		<script src="js/Bmob-2.2.4.min.js"></script>
+		<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+		<script>
+			Bmob.initialize("c262cadfad18ef91", "123456");
+			Bmob.debug(true);
+			var i=-1;
+			function getSubject(flag){
+				const sub = Bmob.Query("Question");
+				sub.equalTo("type1", "==", "选择题");
+				sub.find().then(res => {
+				  var spanTag = document.getElementById("text-design");
+				  spanTag.innerHTML=i+1+"、"+res[i].subject;
+				});
+				optionFlag=flag;
+				if(flag==0){
+					i=i+1;				
+				}else{
+					i=i-1
+				}
+				setA(1,1);
+				setB(1,1);
+				setC(1,1);
+				setD(1,1);
+			}
+			
+			function setA(btn,flag){
+				if(flag==1){
+				  	$("#btnA").css("background","#FFDAB9");
+				  	return;
+				}
+				const sub = Bmob.Query("Question");
+				sub.equalTo("type1", "==", "选择题");
+				sub.find().then(res => {
+				  if(res[i].answer=="A"){
+				  	btn.style.backgroundColor="#b2d235";
+				  }else{
+				  	btn.style.backgroundColor="#d71345";
+				  }
+				  
+				});
+				
+			}
+			function setB(btn,flag){
+				if(flag==1){
+					$("#btnB").css("background","#FFDAB9");			  	
+				  	return;
+				}
+				const sub = Bmob.Query("Question");
+				sub.equalTo("type1", "==", "选择题");
+				sub.find().then(res => {
+				  if(res[i].answer=="B"){
+				  	btn.style.backgroundColor="#b2d235";
+				  }else{
+				  	btn.style.backgroundColor="#d71345";
+				  }
+				});
+				
+			}
+			function setC(btn,flag){
+				if(flag==1){
+				  	$("#btnC").css("background","#FFDAB9");
+				  	return;
+				}
+				const sub = Bmob.Query("Question");
+				sub.equalTo("type1", "==", "选择题");
+				sub.find().then(res => {
+				  if(res[i].answer=="C"){
+				  	btn.style.backgroundColor="#b2d235";
+				  }else{
+				  	btn.style.backgroundColor="#d71345";
+				  }
+				});
+				
+			}
+			function setD(btn,flag){
+				if(flag==1){
+				  	$("#btnD").css("background","#FFDAB9");
+				  	return;
+				}
+				const sub = Bmob.Query("Question");
+				sub.equalTo("type1", "==", "选择题");
+				sub.find().then(res => {
+				  if(res[i].answer=="D"){
+				  	btn.style.backgroundColor="#b2d235";
+				  }else{
+				  	btn.style.backgroundColor="#d71345";
+				  }
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<div id="show-back">
 			<h1>选择题</h1>
 				<h2>题目</h2>
-				<textarea id="text-design"rows="5"cols="76"disabled="disabled"></textarea>
+				<textarea id="text-design"rows="5"cols="60"disabled="disabled"></textarea>
 				<div id="answer" class="form">
-					<button>A</button>
-					<button>B</button>
-					<button>C</button>
-					<button>D</button>
+					<button id='btnA' onclick="setA(this,0)">A</button>
+					<button id='btnB' onclick="setB(this,0)">B</button>
+					<button id='btnC' onclick="setC(this,0)">C</button>
+					<button id='btnD' onclick="setD(this,0)">D</button>
 				</div>
 			<div id="button-design"class="form">
-				<button>上一题</button>
-				<button>下一题</button>
+				<button onclick="getSubject(1)">上一题</button>
+				<button onclick="getSubject(0)">下一题</button>
 			</div>
 			
-			
+		</div>	
 	</body>
 </html>

@@ -6,7 +6,7 @@ body{
 }
 #show-back{
 	width: 60%;
-	height:400px;
+	height:450px;
 	margin: 0 auto;
 	margin-top: 5%;
 	text-align: left;
@@ -16,8 +16,9 @@ body{
 #text-design{
 	background: #FFDAB9;
 	font: "微软雅黑";
-	font-size: 20px;
-	color: #0D0D0D;
+	font-size: 25px;
+	font-weight: 600;
+	color: #84331f;
 }
 
 h1{
@@ -37,13 +38,14 @@ h3{
 	color: #CD0000;
 	float: right;
 	margin-right: 10px;
+	margin-top: 30px;
 }
 #answer{
 	margin-top: 20px;
 }
 #answer button{
 	height: 30px;
-	width: 50px;
+	width: 80px;
 	background: #FFDAB9;
 	color: #CD0000;
 	float: left;
@@ -54,6 +56,7 @@ h3{
 	width: auto;
 	font: "微软雅黑";
 	font-size: 22px;
-	color:#0D0D0D;
+	font-weight:500;
+	color:#84331f;
 	margin-left: 10px;
 }
