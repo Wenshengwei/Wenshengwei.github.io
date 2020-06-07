@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<script> 
 			Bmob.initialize("c262cadfad18ef91", "123456");
-			Bmob.debug(true);
+			/*Bmob.debug(true);*/
 			function Login(){
 				Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
 				    location.href = "homePage.html";
